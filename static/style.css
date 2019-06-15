@@ -1,0 +1,56 @@
+html, body {
+  overflow-x: hidden;
+  position: relative;
+}
+#outer { overflow: hidden; height: 100%; }
+#adaptive { float: top; }
+#filler { overflow: hidden; width: 100%; height:100%; background-color: #afafaf;overflow-y: auto; }
+div.menu {
+overflow-y: auto;
+float: left;
+background-color: orange;
+width: 20%;
+height: 90%;
+padding: 1%;
+}
+div.content {
+float:right;
+width:80%;
+background-color: green;
+height: 100%;
+padding: 1px;
+overflow-y: auto;
+}
+.navbar{
+margin-bottom: 0px;
+background-color: black;
+min-height: 20px;
+height: 55px;
+padding-top: 2px;
+padding-bottom: 2px;
+border: solid 2px pink;
+}
+#logoText { color: #3AC1EF; line-height: 80%; }
+.navbar a { color: #100000; font-size: 130%; line-height: 26px;  }
+li.active { background-color: #afafaf;}
+.navbar-header {
+min-height: 20px;
+height:40px;
+font-size: 130%;
+}
+#username {color: red; line-height: 180%; }
+.logopicwrapper{
+   height: 40vh;
+}
+.logopicitem{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.logopicitem:after{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}

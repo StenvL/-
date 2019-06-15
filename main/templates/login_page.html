@@ -1,0 +1,29 @@
+{%extends 'basic.html'%}
+{% block content %}
+<style>
+    .login {
+        width: 70%;
+        float: center;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5%;
+    }
+</style>
+{% if user.is_authenticated %}
+<h3 class="login">You are logged in as [{{name}}]</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input class="hidden" name="action" value="logout">
+    <input class="login" type="submit" value="Log out">
+</form>
+{% else %}
+<h1 align=center>Log in</h1>
+<form method="post">
+{% csrf_token %}
+<input class="login" name="username" type="text">
+<input class="login" name="password" type="password">
+<input class="hidden" name="action" value="login">
+<input class="login" type="submit" value="Log in">
+</form>
+{% endif %}
+{% endblock %}
