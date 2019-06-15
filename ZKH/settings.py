@@ -16,7 +16,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '24*we&3hgk0m3(gm@tmhc(a38!&j7q#m&ge^@%s4v-jq3q89j9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = [u'OblZhKH.pythonanywhere.com']
+ALLOWED_HOSTS = [u'OblZhKH.pythonanywhere.com', u'127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -42,7 +42,7 @@ ROOT_URLCONF = 'ZKH.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/OblZhKH/ZKH/main/templates/'],
+        'DIRS': ['./main/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,7 +91,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = u'/home/OblZhKH/ZKH/media'
+MEDIA_ROOT = u'./media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/OblZhKH/ZKH/static'
+STATIC_ROOT = u'./main/static'
 STATIC_URL = '/static/'
