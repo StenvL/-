@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3d98d5-2d5b-4f0b-bb04-5a257953dc4f" name="Default Changelist" comment="" />
+    <list default="true" id="eb3d98d5-2d5b-4f0b-bb04-5a257953dc4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="193" column="47" lean-forward="true" selection-start-line="193" selection-start-column="47" selection-end-line="193" selection-end-column="47" />
+            <state relative-caret-position="442">
+              <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -112,6 +114,7 @@
       <find>count_rat</find>
       <find>print</find>
       <find>rating</find>
+      <find>nor</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -379,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="193" column="47" lean-forward="true" selection-start-line="193" selection-start-column="47" selection-end-line="193" selection-end-column="47" />
+        <state relative-caret-position="442">
+          <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
