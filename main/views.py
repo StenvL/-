@@ -90,15 +90,11 @@ def rating(request):
                 )
             )
 
-            print(orgQuality)
-            print(orgExperience)
-
-        # for record in data:
-        #     result.append(NormalizedData(record, maxCost))
-        #     result.append
+            result.append([orgName, orgQuality, orgExperience])
         
-        # minCost = min(data.cost)
-
+        # Массив массивов со структурой [Название компании, Качество, Опыт]
+        print(result)
+        return result
 
     normalize()
     return render(request, template_name='rating.html', context={'name': request.user.username})
