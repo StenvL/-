@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import about, login_page, rating, form
+from main.views import about, login_page, rating, form, tender
 
 urlpatterns = [
+    path('tender', tender),
+    path('tender/', tender),
     path('form', form),
     path('form/', form),
     path('rating', rating),

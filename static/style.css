@@ -7,14 +7,6 @@ header {
     background: #F5F5F7;
 }
 			
-.logo {
-	position: absolute;
-	width: auto;
-	height: 35px;
-	top: 40;
-	left: 15%;
-}
-			
 .t1 {
 	position: absolute;
 	width: 128px;

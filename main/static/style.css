@@ -24,6 +24,7 @@ header {
 	text-align: center;
 	background: #C4C4C4;
     border-radius: 8px;
+    
 }
 			
 .t2 {
@@ -50,10 +51,10 @@ header {
 			
 .t4 {
 	position: absolute;
-	width: 128px;
+	width: 150px;
 	height: 41px;
 	left: 78%;
-	top: 14px;
+	top: 29px;
 	text-align: center;
 	background: #C4C4C4;
     border-radius: 8px;
@@ -70,9 +71,15 @@ header {
 	background: #C4C4C4;
     border-radius: 8px;
 }
-			
+
+.t6{
+    position: absolute;
+	width: 150px;
+	height: 41px;
+
+}
 .f {
-	margin-top: 9;
+	margin-top: 3;
 }
 			
 .main {
@@ -102,7 +109,7 @@ footer {
     margin-top: 100px;
 }
 
-form {
+.formm {
     position: absolute;
     width: 500px;
     height: auto;
@@ -153,4 +160,39 @@ h2 {
 
 .opisanie{
     margin-left: 60;
+}
+
+.tender{
+     position: absolute;
+    width: 530;
+    height: auto;
+    left: 60px;
+    top: 120px;
+    background: #CECCCC; 
+    border-radius: 8px;
+    
+
+}
+
+.teder {
+    position: absolute;
+    width: 530;
+    height: auto;
+    margin-left: 60px;
+    top: 210px;
+    border-radius: 8px;
+
+}
+
+a {
+    text-decoration:none;
+    color: black;
+    font-family: cursive;
+    font-size: 20;
+}
+
+a:active {
+    text-decoration:none;
+    color: red;
+    
 }

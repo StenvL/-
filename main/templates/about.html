@@ -1,34 +1,30 @@
-<html>
-	<head>
-		<meta charset="utf8">
-		<link rel="stylesheet" type="text/css" href="static/style.css">
-    </head>
-	<body>
-	
-		<!-- Menu -->
-		<header>
-			<div class="container">
-				<div class="logo"><a href="">Облачный ЖКХ</a></div>
-				<nav>
-					<div class="t1"><div class="f"><a href="">Таблица</a></div></div>
-					<div class="t2"><div class="f"><a href="">Рейтинг</a></div></div>
-					<div class="t3"><div class="f"><a href="/about">О проекте</a></div></div>
-					<div class="t4"><div class="f"><a href="/login_page">Войти</a></div></div>
-				</nav>
-			</div>
-		</header>
-		
-		<div class="main"> 
+{% extends 'basic.html' %}
+{% block content %}
+		<div class="main">
 			<div class="t5"><div class="f"><a href="/form">Подать заявку</a></div></div>
 			
             <div><h2>О проекте</h2></div>
-            <div class="opisanie">Данный проект</div>
-		</div>
-		
-		<footer>
-			<div class="container">
-			
+            <div class="opisanie">
+Наш сайт предлагает Вам ознакомиться с рейтингом обслуживающих компаний в сфере ЖКХ
+<br>
+Оценка качества работы подрядных организаций строится на следующих критериях:
+<br>
+Время выполнения работ (Кол-во обращений / проблем по результатам работ на протяжении какого-то времени)
+<br>
+Качество
+<br>
+Кол-во обращений / проблем в процессе работ
+<br>
+Кол-во обращений / проблем по результатам работ на протяжении какого-то времени
+<br>
+Скорость отклика и решения жалоб.
+<br>
+Опыт работ (кол-во выполненных работ, участие в тендерах)
 			</div>
-		</footer>	
-	</body>
-</html>
+		</div>
+<footer>
+			<div class="container">
+
+			</div>
+		</footer>
+{% endblock %}

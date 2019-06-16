@@ -1,34 +1,21 @@
-<html>
-	<head>
-		<meta charset="utf8">
-		<link rel="stylesheet" type="text/css" href="static/style.css">
-    </head>
-	<body>
-	
-		<!-- Menu -->
-		<header>
-			<div class="container">
-				<div class="logo"><a href="/">Облачный ЖКХ</a></div>
-				<nav>
-					<div class="t1"><div class="f"><a href="">Таблица</a></div></div>
-					<div class="t2"><div class="f"><a href="">Рейтинг</a></div></div>
-					<div class="t3"><div class="f"><a href="/about">О проекте</a></div></div>
-					<div class="t4"><div class="f"><a href="/login_page">Войти</a></div></div>
-				</nav>
-			</div>
-		</header>
-		
-		<div class="main"> 
-			<div class="t5"><div class="f"><a href="/form">Подать заявку</a></div></div>
-			
-            <div class="hello_jkx"><h1>ЖКХ</h1></div>
-            <div class="privet"><h1>данные</h1>  </div>
-		</div>
-		
-		<footer>
-			<div class="container">
-			
-			</div>
-		</footer>	
-	</body>
-</html>
+{% extends 'basic.html' %}
+{% block content %}
+
+<div class="main" style="padding: 30px;">
+			<div class="t5"><div class="f"><a href="form.html">Apply request</a></div></div>
+            <div class="t6"><div class="f"><a href="tender.html">Tender</a></div></div>
+			<table class="teder1" border="1"  >
+            <tr>
+                <th>Title</th>
+                <th>%</th>
+            </tr>
+			{% for k in rows %}
+				<tr>
+					{% for l in k %}
+                	<td height="20px" width="300">{{ l }}</td>
+					{% endfor %}
+            	</tr>
+			{% endfor %}
+        </table>
+</div>
+{% endblock %}

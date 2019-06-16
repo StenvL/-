@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>Облачное ЖКХ</title>
+	<style type="text/css">
+            .t6 {
+                position: absolute;
+                width: 150px;
+                height: 41px;
+                left: 78%;
+                top: 80px;
+
+                text-align: center;
+                background: #C4C4C4;
+                border-radius: 8px;
+		}
+		.logo {
+	position: absolute;
+	width: auto;
+	height: 35px;
+	top: 40;
+	left: 15%;
+		}
+        </style>
+</head>
+	<body>
+		<!-- Menu -->
+		<header>
+			<div class="container">
+				<div class="logo"><a class="logo" href="">Облачное ЖКХ</a></div>
+				<nav>
+					<div class="t1"><div class="f"><a href="/">Рейтинг</a></div></div>
+					<div class="t2"><div class="f"><a href="/tender/">Тендер</a></div></div>
+					<div class="t3"><div class="f"><a href="/about/">О проекте</a></div></div>
+					<div class="t4"><div class="f"><a href="/login_page/">
+						{% if user.is_authenticated %}
+						{{ name }}
+						{% else %}
+						Войти
+						{% endif %}
+					</a></div></div>
+				</nav>
+			</div>
+		</header>
+    {% block content %}
+    {% endblock %}
+
+	</body>
+</html>

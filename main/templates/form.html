@@ -1,25 +1,57 @@
-<html>
-	<head>
-		<meta charset="utf8">
-		<link rel="stylesheet" type="text/css" href="static/style.css">
-	</head>
-	<body>
-	
-		<!-- Menu -->
-		<header>
-			<div class="container">
-				<div class="logo"><a href="">Облачный ЖКХ</a></div>
-				<nav>
-					<div class="t1"><div class="f"><a href="">Таблица</a></div></div>
-					<div class="t2"><div class="f"><a href="">Рейтинг</a></div></div>
-					<div class="t3"><div class="f"><a href="/about">О проекте</a></div></div>
-					<div class="t4"><div class="f"><a href="/login_page">Войти</a></div></div>
-				</nav>
-			</div>
-		</header>
-		
+{% extends 'basic.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="main">
+            <div class="ff"><h2 class="h2_form">Заявка в управляющую компанию</h2></div>
+            <form action="" method="" class="formm">
+                <table>
+                    <tr>
+                        <td><label>FIO:</label> </td>
+                        <td><input size="40" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Adress:</label> </td>
+                        <td><input size="40" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label>E-mail:</label></td>
+                        <td><input size="40" type="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Tel:</label></td>
+                        <td><input size="40" type="tel"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Type:</label></td>
+                        <td>
+                            <select name="tip">
+                                <option>landscaping</option>
+                                <option>road repair</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Danger level:</label></td>
+                        <td>
+                            <select name="danger">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="radio" name="inon" value="in"> In the process
+                <input type="radio" name="inon" value="on"> Post factum
+                <p><label>Describe your problem</label>:</p> <textarea ></textarea>
+                <p> <input class="formbtn" type="submit"> </p>
+            </form>
+		</div>
+{% else %}
 		<div class="main"> 
             <div class="ff"><h2 class="h2_form">Заявка на устранение проблемы</h2></div>
+            <div class="t6"><div class="f"><a href="/tender">Tender</a></div></div>
             <form action="" method="" class="formm">
                 <table>
                     <tr>
@@ -43,7 +75,7 @@
                         <td>
                             <select name="tip">
                                 <option>Дороги</option>
-                                <option>Многоквартирные</option>
+                                <option>Многоквартирные дома</option>
                             </select>
                         </td>
                     </tr>
@@ -52,11 +84,10 @@
                 <p> <input class="formbtn" type="submit"> </p>
             </form>
 		</div>
-		
-		<footer>
+<footer>
 			<div class="container">
-			
+
 			</div>
-		</footer>	
-	</body>
-</html>
+		</footer>
+{% endif %}
+{% endblock %}

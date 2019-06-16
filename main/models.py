@@ -104,6 +104,14 @@ class DataManager(m.Manager):
             new_id = Everything.objects.all().order_by("-id")[0].id+1
         entry = Everything(new_id, territory_name, planned_length, money, job_type_name, executor_name, year, accident_type, accident_weight, shift_weight, shift_days)
         entry.save()
+
+    @classmethod
+    def add_company(self, company_name, foundation_date):
+        new_id = 1
+        if (Company.objects.all().count() > 0):
+            new_id = Company.objects.all().order_by("-id")[0].id + 1
+        entry = Company(new_id, company_name, foundation_date)
+        entry.save()
     #not implemented yet
     @classmethod
     def add_contract(self, address, territory_type, client, job_type, year, status, money, contract_id, executor, start_date, end_date, claim, claim_date, fix_date, fixed_too_late, claims_during_fixes, final_claims_after_fix):
@@ -145,6 +153,9 @@ class Everything(m.Model):
     accident_weight = m.BigIntegerField()
     shift_weight = m.BigIntegerField()
     shift_days = m.BigIntegerField()
+class Company(m.Model):
+    executor_name = m.CharField(max_length = 100)
+    foundation_date = m.BigIntegerField()
 
 '''
 1. сложность проекта = Contract.money // учесть время?

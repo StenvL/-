@@ -1,0 +1,70 @@
+{% extends 'basic.html' %}
+{% block content %}
+		<div class="main">
+            			<div class="t5"><div class="f"><a href="/form">Подать заявку</a></div></div>
+		<h2 align="center">Тендер</h2>
+        <div>
+        <form action="" method="" class="tender">
+        <table>
+            <tr>
+                <td><label>Планируемая дата начала</label></td>
+                <td><label>Планируемая дата конца</label></td>
+                <td><label>Тип работы</label></td>
+                <td><label>Стоимость</label></td>
+                <td><label>Масштаб</label></td>
+            </tr>
+            <tr>
+                <td><input type="date"> </td>
+                <td><input type="date"> </td>
+                <td>
+                    <select>
+                        <option>Благоустройство</option>
+                        <option>Ремонт дорожных покрытий</option>
+                    </select>
+                </td>
+                <td><input type="value"> </td>
+                <td>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><input class="tenderbtn" type="submit" value="Получить"></td>
+            </tr>
+        </table>
+        </form>
+        <table class="teder" border="1"  >
+            <tr>
+                <th>Наименование</th>
+                <th>Качество</th>
+                <th>Средняя цена контракта</th>
+                <th>Вероятность успешного выполнения</th>
+            </tr>
+            <tr>
+                {% for k in rows %}
+				<tr>
+					{% for l in k %}
+                	<td height="20px" width="250">{{ l }}</td>
+					{% endfor %}
+            	</tr>
+			{% endfor %}
+            </tr>
+        </table>
+        </div>
+    </div>
+{% endblock %}
