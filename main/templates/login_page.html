@@ -1,31 +1,44 @@
-{%extends 'basic.html'%}
-{% block content %}
-<style>
-.login {
-    width: 70%;
-    float: center;
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-</style>
-{% if user.is_authenticated %}
-<h3 align=center class="login">Вы зашли как [ {{name}} ]</h3>
-<form method="POST">
-    {% csrf_token %}
-    <input class="hidden" name="action" value="logout">
-    <input class="login" style="height:7%;" type="submit" value="Выйти">
-</form>
-{% else %}
-<h1 align=center>Войти</h1>
-<form method="post">
-{% csrf_token %}
-<input class="login" name="username" type="text">
-<input class="login" name="password" type="password">
-<input class="hidden" name="action" value="login">
-<input class="login" type="submit" value="Log in">
-</form>
-
-
-{% endif %}
-{% endblock %}
+<html>
+	<head>
+		<meta charset="utf8">
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+	</head>
+	<body>
+	
+		<!-- Menu -->
+		<header>
+			<div class="container">
+				<div class="logo"><a href="">Облачный ЖКХ</a></div>
+				<nav>
+					<div class="t1"><div class="f"><a href="">Таблица</a></div></div>
+					<div class="t2"><div class="f"><a href="">Рейтинг</a></div></div>
+					<div class="t3"><div class="f"><a href="/about">О проекте</a></div></div>
+					<div class="t4"><div class="f"><a href="/login_page">Войти</a></div></div>
+				</nav>
+			</div>
+		</header>
+		
+		<div class="main"> 
+            <div class="ff"><h2>Авторизация</h2></div>
+            <form action="login" method="" class="formm">
+                <table>
+                    <tr>
+                        <td><label>Логин:</label> </td>
+                        <td><input size="40" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Пароль:</label> </td>
+                        <td><input size="40" type="text"></td>
+                    </tr>
+                </table>
+               <p> <input class="formbtn" type="submit"> </p>
+            </form>
+		</div>
+		
+		<footer>
+			<div class="container">
+			
+			</div>
+		</footer>	
+	</body>
+</html>
